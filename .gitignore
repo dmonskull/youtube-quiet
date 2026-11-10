@@ -1,0 +1,6 @@
+.DS_Store
+*.crx
+*.pem
+test/.profile*/
+test/out/
+_metadata/

@@ -1,0 +1,42 @@
+/* Ad slots that reach the page as ordinary elements. Player ads are handled in
+   engine.js. #player-ads itself is deliberately not hidden: YouTube checks it. */
+
+/* Home, search and watch-next feeds */
+ytd-rich-item-renderer:has(ytd-ad-slot-renderer),
+ytd-rich-section-renderer:has(ytd-ad-slot-renderer),
+ytd-ad-slot-renderer,
+ytd-in-feed-ad-layout-renderer,
+ytd-display-ad-renderer,
+ytd-promoted-video-renderer,
+ytd-promoted-sparkles-web-renderer,
+ytd-promoted-sparkles-text-search-renderer,
+ytd-search-pyv-renderer,
+ytd-compact-promoted-video-renderer,
+ytd-carousel-ad-renderer,
+
+/* Banners above the feed */
+#masthead-ad,
+ytd-video-masthead-ad-v3-renderer,
+ytd-primetime-promo-renderer,
+
+/* Beside and below the player */
+ytd-companion-slot-renderer,
+ytd-action-companion-ad-renderer,
+ytd-player-legacy-desktop-watch-ads-renderer,
+ytd-engagement-panel-section-list-renderer[target-id="engagement-panel-ads"],
+
+/* Over the player */
+.ytp-ad-overlay-container,
+.ytp-ad-overlay-slot,
+.ytp-ad-image-overlay,
+.ytp-featured-product,
+
+/* Shorts and mobile web */
+ytd-reel-video-renderer:has(ytd-ad-slot-renderer),
+ytm-promoted-sparkles-web-renderer,
+ytm-promoted-video-renderer,
+ytm-companion-ad-renderer,
+ytm-rich-item-renderer:has(ad-slot-renderer),
+ad-slot-renderer {
+  display: none !important;
+}

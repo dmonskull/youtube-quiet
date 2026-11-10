@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>YouTube Quiet</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header><span class="brand-mark" aria-hidden="true">q</span><span>YouTube Quiet</span><span class="tag">CHROME · OPERA</span></header>
+  <main>
+    <p class="eyebrow">LESS INTERRUPTION</p>
+    <h1>Just the<br>video.</h1>
+    <section class="control" aria-label="Ad filtering">
+      <div><p id="status">Connecting…</p><span id="detail">Reading your setting</span></div>
+      <button id="toggle" class="toggle" type="button" role="switch" aria-checked="false" aria-label="Block YouTube ads" disabled><span></span></button>
+    </section>
+    <section class="stats" aria-label="Activity">
+      <div><strong id="pruned">0</strong><span>ad lists removed</span></div>
+      <div><strong id="skipped">0</strong><span>ads skipped</span></div>
+    </section>
+    <p class="note" id="notice" role="status" aria-live="polite">Reload YouTube after changing this setting.</p>
+    <button id="reload" class="reload" type="button" disabled>Reload YouTube tab <span aria-hidden="true">↻</span></button>
+    <div class="info"><span class="dot" aria-hidden="true"></span><p>Runs locally. Nothing leaves your browser.<br><span>YouTube changes often; a break can slip through.</span></p></div>
+  </main>
+  <footer><span id="version">EXPERIMENTAL</span><button id="reset" class="link" type="button">Reset counts</button></footer>
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Quiet",
+  "version": "0.1.0",
+  "description": "YouTube ad blocker. Simple on/off switch.",
+  "minimum_chrome_version": "111",
+  "permissions": ["storage", "scripting", "declarativeNetRequest"],
+  "host_permissions": [
+    "https://www.youtube.com/*",
+    "https://m.youtube.com/*",
+    "https://music.youtube.com/*",
+    "https://www.youtube-nocookie.com/*"
+  ],
+  "background": { "service_worker": "background.js" },
+  "declarative_net_request": {
+    "rule_resources": [{ "id": "ad_requests", "enabled": true, "path": "rules.json" }]
+  },
+  "action": { "default_popup": "popup.html", "default_title": "YouTube Quiet" },
+  "icons": { "16": "icons/16.png", "48": "icons/48.png", "128": "icons/128.png" }
+}
